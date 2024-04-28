@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@color/light_grey"
+        android:padding="10dp"
+        android:textSize="48sp"
+        android:layout_marginTop="30dp"
+        android:text="@string/calculatorApp"
+        android:fontFamily="monospace"
+        android:gravity="center_horizontal"
+        />
+    <TextView
+        android:id="@+id/tvInput"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:background="@color/light_grey"
+        android:padding="10dp"
+        android:textSize="48sp"
+        android:fontFamily="monospace"
+        android:layout_marginTop="-30dp"
+        android:gravity="end|center_vertical|bottom"
+    />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/btnSeven"
+            android:layout_margin="3dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onDigit"
+            android:background="@drawable/custom_button"
+            android:text="@string/_7"
+            android:fontFamily="monospace"
+            android:textSize="45sp"
+            tools:ignore="ButtonStyle,NestedWeights" />
+        <Button
+            android:id="@+id/btnEight"
+            android:layout_margin="3dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onDigit"
+            android:background="@drawable/custom_button"
+            android:text="@string/_8"
+            android:fontFamily="monospace"
+            android:textSize="45sp"
+            tools:ignore="ButtonStyle" />
+        <Button
+            android:id="@+id/btnNine"
+            android:layout_margin="3dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onDigit"
+            android:background="@drawable/custom_button"
+            android:text="@string/_9"
+            android:fontFamily="monospace"
+            android:textSize="45sp"
+            tools:ignore="ButtonStyle" />
+        <Button
+            android:id="@+id/btnDivide"
+            android:layout_margin="3dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onOperator"
+            android:background="@drawable/custom_button"
+            android:text="@string/_divide"
+            android:fontFamily="monospace"
+            android:textSize="45sp"
+            tools:ignore="ButtonStyle" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        >
+
+        <Button
+            android:id="@+id/btnFour"
+            android:layout_margin="3dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onDigit"
+            android:background="@drawable/custom_button"
+            android:text="@string/_4"
+            android:fontFamily="monospace"
+            android:textSize="45sp"
+            tools:ignore="ButtonStyle,NestedWeights" />
+        <Button
+            android:id="@+id/btnFive"
+            android:layout_margin="3dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onDigit"
+            android:background="@drawable/custom_button"
+            android:text="@string/_5"
+            android:fontFamily="monospace"
+            android:textSize="45sp"
+            tools:ignore="ButtonStyle" />
+        <Button
+            android:id="@+id/btnSix"
+            android:layout_width="0dp"
+            android:layout_margin="3dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onDigit"
+            android:background="@drawable/custom_button"
+            android:text="@string/_6"
+            android:fontFamily="monospace"
+            android:textSize="45sp"
+            tools:ignore="ButtonStyle" />
+        <Button
+            android:id="@+id/btnMultiply"
+            android:layout_width="0dp"
+            android:layout_margin="3dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onOperator"
+            android:background="@drawable/custom_button"
+            android:text="@string/_multiply"
+            android:fontFamily="monospace"
+            android:textSize="45sp"
+            tools:ignore="ButtonStyle" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        >
+
+        <Button
+            android:id="@+id/btnOne"
+            android:layout_width="0dp"
+            android:layout_margin="3dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onDigit"
+            android:background="@drawable/custom_button"
+            android:text="@string/_1"
+            android:fontFamily="monospace"
+            android:textSize="45sp"
+            tools:ignore="ButtonStyle,NestedWeights" />
+        <Button
+            android:id="@+id/btnTwo"
+            android:layout_width="0dp"
+            android:layout_margin="3dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onDigit"
+            android:background="@drawable/custom_button"
+            android:text="@string/_2"
+            android:fontFamily="monospace"
+            android:textSize="45sp"
+            tools:ignore="ButtonStyle" />
+        <Button
+            android:id="@+id/btnThree"
+            android:layout_width="0dp"
+            android:layout_margin="3dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onDigit"
+            android:background="@drawable/custom_button"
+            android:text="@string/_3"
+            android:fontFamily="monospace"
+            android:textSize="45sp"
+            tools:ignore="ButtonStyle" />
+        <Button
+            android:id="@+id/btnSubtract"
+            android:layout_width="0dp"
+            android:layout_margin="3dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onOperator"
+            android:background="@drawable/custom_button"
+            android:text="@string/_minus"
+            android:fontFamily="monospace"
+            android:textSize="45sp"
+            tools:ignore="ButtonStyle" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        >
+
+        <Button
+            android:id="@+id/btnZero"
+            android:layout_width="0dp"
+            android:layout_margin="3dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onDigit"
+            android:background="@drawable/custom_button"
+            android:text="@string/_zero"
+            android:fontFamily="monospace"
+            android:textSize="45sp"
+            tools:ignore="ButtonStyle,NestedWeights" />
+        <Button
+            android:id="@+id/btnDecimal"
+            android:layout_width="0dp"
+            android:layout_margin="3dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onDecimalPoint"
+            android:background="@drawable/custom_button"
+            android:text="@string/_decimal"
+            android:fontFamily="monospace"
+            android:textSize="45sp"
+            tools:ignore="ButtonStyle" />
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="0dp"
+            android:layout_margin="3dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onClr"
+            android:background="@drawable/custom_button"
+            android:text="@string/clr"
+            android:fontFamily="monospace"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            tools:ignore="ButtonStyle" />
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="0dp"
+            android:layout_margin="3dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onOperator"
+            android:background="@drawable/custom_button"
+            android:text="@string/_plus"
+            android:fontFamily="monospace"
+            android:textSize="45sp"
+            tools:ignore="ButtonStyle" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_marginBottom="30dp"
+        >
+
+        <Button
+            android:id="@+id/btnEqual"
+            android:layout_width="0dp"
+            android:layout_margin="3dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onEqual"
+            android:text="@string/_equal"
+            android:background="@drawable/custom_button"
+            tools:ignore="NestedWeights"
+            android:fontFamily="monospace"
+            android:textSize="45sp"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
